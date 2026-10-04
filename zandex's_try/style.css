@@ -1,14 +1,17 @@
 /* ---------- Variables ---------- */
+/* Importing google fonts */
+@import url('https://googleapis.com');
+
 :root {
   /* --primary: #1d4ed8; */
    --primary: #e3a157;
   /* --primary-dark: #1e3a8a; */
-   --primary-dark: #5d3a24;
+   --primary-dark: #b85e2e;
   --accent: #f59e0b;
   /* --bg: #f1f5f9; */
-  --bg: #e8d1a7;
+  --bg: #f9e8d4;
   /* --card: #ffffff; */
-  --card: #f0e7c2;
+  --card: #e4f0f6;
   --text: #0f172a;
   --muted: #64748b;
   --border: #e2e8f0;
