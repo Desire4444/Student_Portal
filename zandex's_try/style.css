@@ -32,7 +32,12 @@ body {
   color: var(--text);
   background: var(--bg);
 }
-h1 { font-size: 1.5rem; letter-spacing: .3px; }
+h1 { font-size: 1.5rem; letter-spacing: .3px;
+      font-weight: 600;
+      text-wrap: nowrap;
+      transition: 0.5s ease-in-out;
+      list-style: none;
+}
 h2 { font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 1rem;
      padding-bottom: .4rem; border-bottom: 2px solid var(--accent); display: inline-block; }
 h3 { margin: 1.5rem 0 .6rem; color: var(--primary-dark); }
