@@ -1,16 +1,16 @@
 /* =========================================================
    Student Information Portal - script.js
-   Q4: variables, conditionals, arrays, functions, events
-   Q5: DOM-based To-Do list
+   variables, conditionals, arrays, functions, events
+   DOM-based To-Do list
    ========================================================= */
 
-/* ---------- Q4(a) Variables: one student represented with variables ---------- */
-const studentName = "John Doe";
+/* ---------- Variables: one student represented with variables ---------- */
+const studentName = "Theophilus Miri";
 const studentRegNo = "BICT/2026/001";
 let studentLevel = 2;
 const passMark = 50;
 
-/* ---------- Q4(c) Array of student objects (at least 5) ---------- */
+/* ---------- Array of student objects ---------- */
 const students = [
   { name: "Amina Bello",   regNo: "BICT/2026/101", marks: [72, 65, 80] },
   { name: "Chidi Okafor",  regNo: "BICT/2026/102", marks: [45, 38, 52] },
@@ -20,7 +20,7 @@ const students = [
   { name: "Ibrahim Musa",  regNo: "BICT/2026/106", marks: [50, 50, 50] }
 ];
 
-/* ---------- Q4(d) Function: calculate average mark ---------- */
+/* ---------- calculate average mark ---------- */
 function calculateAverage(marks) {
   let total = 0;
   for (let i = 0; i < marks.length; i++) {
@@ -29,7 +29,7 @@ function calculateAverage(marks) {
   return marks.length === 0 ? 0 : total / marks.length;
 }
 
-/* ---------- Q4(b) Conditional logic: PASS / FAIL ---------- */
+/* ---------- Conditional fuunction: PASS / FAIL ---------- */
 function getResult(average) {
   if (average >= passMark) {
     return "PASS";
@@ -68,7 +68,7 @@ function showResultMessage(student) {
   resultMessage.className = "message " + (result === "PASS" ? "ok" : "bad");
 }
 
-/* ---------- Q4(e) Events: click on a "View" button (event delegation) ---------- */
+/* ---------- Events: click on a "View" button (event delegation) ---------- */
 resultsBody.addEventListener("click", function (event) {
   const button = event.target.closest("button[data-index]");
   if (button) {
@@ -76,7 +76,7 @@ resultsBody.addEventListener("click", function (event) {
   }
 });
 
-/* ---------- Q4(e) Events: submit the result-check form ---------- */
+/* ---------- Events: submit the result-check form ---------- */
 document.getElementById("check-form").addEventListener("submit", function (event) {
   event.preventDefault();
   const reg = document.getElementById("check-reg").value.trim().toUpperCase();
@@ -155,7 +155,7 @@ registerForm.addEventListener("submit", function (event) {
   formMessage.className = "message ok";
 });
 
-/* ---------- Q5: Mini To-Do List (DOM manipulation) ---------- */
+/* ---------- To-Do List (DOM manipulation) ---------- */
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");

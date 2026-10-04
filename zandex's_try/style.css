@@ -1,10 +1,14 @@
 /* ---------- Variables ---------- */
 :root {
-  --primary: #1d4ed8;
-  --primary-dark: #1e3a8a;
+  /* --primary: #1d4ed8; */
+   --primary: #e3a157;
+  /* --primary-dark: #1e3a8a; */
+   --primary-dark: #5d3a24;
   --accent: #f59e0b;
-  --bg: #f1f5f9;
-  --card: #ffffff;
+  /* --bg: #f1f5f9; */
+  --bg: #e8d1a7;
+  /* --card: #ffffff; */
+  --card: #f0e7c2;
   --text: #0f172a;
   --muted: #64748b;
   --border: #e2e8f0;

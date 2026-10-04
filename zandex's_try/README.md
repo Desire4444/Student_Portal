@@ -22,4 +22,5 @@ Built with plain HTML, CSS and JavaScript only. No frameworks, no libraries, no 
 - Was AI used? Yes
 - Tool used: Claude (Anthropic)
 - Used for: generating the starting code for the portal
-- Parts I modified or wrote myself: ________________________
+- Parts I modified or wrote myself: * html document order, programs, classes 
+                                    * css behavior, css hover effects, 
