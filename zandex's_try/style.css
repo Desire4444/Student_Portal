@@ -24,10 +24,13 @@
 
 /* ---------- Base / Typography ---------- */
 * { 
-  box-sizing: border-box; margin: 0; padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html { 
-  scroll-behavior: smooth; scroll-padding-top: 90px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -40,17 +43,23 @@ body {
   font-size: 1.3rem; letter-spacing: .1px;
   color: white;
   font-weight: 500;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap; */
   text-decoration: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   list-style: none;
 }
 .logo:hover {
+  color: #ffef5a;
   transform: scale(1.1);
 }
+
 h2 { 
-  font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 1rem;
-  padding-bottom: .4rem; border-bottom: 2px solid var(--accent); display: inline-block;
+  font-size: 1.3rem;
+  color:var(--primary-dark);
+  margin-bottom: 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
 }
 h3 {  
   margin: 1.5rem 0 .6rem;
@@ -85,19 +94,19 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: .5rem;
-  padding: .8rem 0;
+  padding: .8rem ;
 }
 .nav-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: .4rem; 
+  gap: .2rem; 
 }
 .nav-list a {
   display: block;
   color: #fff; 
   text-decoration: none;
-  padding: .45rem .9rem;
+  padding: .45rem .5rem;
   border-radius: 6px;
   transition: background .2s, color .2s;
 }
@@ -165,6 +174,9 @@ thead th {
   background: var(--primary);
   color: #fff;
   white-space: nowrap;
+}
+.table_row {
+  border-radius: 5px;
 }
 tbody tr:nth-child(even) { 
   background: #f8fafc;
