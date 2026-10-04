@@ -1,68 +1,25 @@
-This is my personal end of semester project.
+# Student Information Portal (BICT2103 – Assignment 1)
 
-It is a portal site that is supposed to full fill the following.
+Built with plain HTML, CSS and JavaScript only. No frameworks, no libraries, no server.
 
-HTML Structure (20 Marks)
-Develop a webpage for a Student Information Portal.
-The page must contain:
-    • A suitable page title and heading. (2) 
-    • Student personal information section. (3) 
-    • A navigation menu containing at least four links. (3) 
-    • A table displaying at least five students. (4) 
-    • An HTML form containing: 
-        ◦ Name 
-        ◦ Registration number 
-        ◦ Email 
-        ◦ Programme 
-        ◦ Gender 
-        ◦ Submit button (5) 
-    • Appropriate semantic HTML elements. (3) 
-Total: 20 marks
+## How to run
+1. Keep `index.html`, `style.css` and `script.js` in the same folder.
+2. Double-click `index.html` to open it in any modern browser (Chrome, Edge, Firefox).
 
-QUESTION 3 — CSS Interface Design (20 Marks)
-Apply CSS to the Student Information Portal developed in Question 2.
-Your design should demonstrate:
-    • External CSS stylesheet. (3) 
-    • Appropriate typography. (3) 
-    • Navigation styling. (3) 
-    • Table styling. (3) 
-    • Form styling. (3) 
-    • Use of spacing, borders and layout. (3) 
-    • Responsive design for smaller screens. (2) 
-Total: 20 marks
+## Files
+- `index.html` – page structure (Q2): header, navigation, profile, student table, registration form, to-do list
+- `style.css` – external stylesheet (Q3): typography, navigation, table and form styling, responsive layout
+- `script.js` – JavaScript (Q4 and Q5): variables, PASS/FAIL logic, student array, `calculateAverage()`, event listeners, to-do list
 
-QUESTION 4 — JavaScript Client-Side Programming (25 Marks)
-Extend the Student Information Portal using JavaScript.
-Implement:
+## Features
+- Registration form with validation. Submitted requests appear in a table (saved in the browser's localStorage).
+- Results table built from a JavaScript array. Average of 50 or above is PASS, below 50 is FAIL.
+- Check a result by registration number (e.g. `BICT/2026/104`).
+- Mini to-do list: add, complete, edit and delete tasks.
 
-a) Variables and Data
-Create JavaScript variables to represent student information.(4 marks)
-
-b) Conditional Logic
-Display an appropriate message depending on a student's result.
-For example:
-    • 50 or above → PASS 
-    • Below 50 → FAIL 
-(5 marks)
-
-c) Arrays
-Create an array containing at least five students and display the information dynamically.(5 marks)
-
-d) Functions
-Create a JavaScript function that calculates and displays a student's average mark.(5 marks)
-
-e) Events
-Use an event listener to respond to a user action such as clicking a button or submitting a form.(6 marks)
-Total: 25 marks
-
-QUESTION 5 — DOM Manipulation (20 Marks)
-Create a Mini To-Do List using HTML, CSS and JavaScript.
-The application must allow a user to:
-    • Enter a task. (3) 
-    • Add the task to the page dynamically. (4) 
-    • Mark a task as completed. (3) 
-    • Edit a task. (4) 
-    • Delete a task. (3) 
-    • Use JavaScript DOM manipulation and event listeners appropriately. (3) 
-Total: 20 marks
-
+## AI Usage Declaration
+(Fill this in honestly before submitting.)
+- Was AI used? Yes
+- Tool used: Claude (Anthropic)
+- Used for: generating the starting code for the portal
+- Parts I modified or wrote myself: ________________________
