@@ -1,25 +1,25 @@
-# Student Information Portal (BICT2103 – Assignment 1)
+# Student Information Portal
 
-Built with plain HTML, CSS and JavaScript only. No frameworks, no libraries, no server.
+Built with vanila HTML, CSS and JavaScript only.
 
 ## How to run
 1. Keep `index.html`, `style.css` and `script.js` in the same folder.
-2. Double-click `index.html` to open it in any modern browser (Chrome, Edge, Firefox).
+2. Double-click `index.html` to open it in any modern browser.
+3. Note that it only runs locally.
 
 ## Files
-- `index.html` – page structure (Q2): header, navigation, profile, student table, registration form, to-do list
-- `style.css` – external stylesheet (Q3): typography, navigation, table and form styling, responsive layout
-- `script.js` – JavaScript (Q4 and Q5): variables, PASS/FAIL logic, student array, `calculateAverage()`, event listeners, to-do list
+- `index.html` – page structure : header, navigation, profile, student table, registration form, to-do list
+- `style.css` – external stylesheet : typography, navigation, table and form styling, responsive layout
+- `script.js` – JavaScript : variables, PASS/FAIL logic, student array, `calculateAverage()`, event listeners, to-do list
 
 ## Features
-- Registration form with validation. Submitted requests appear in a table (saved in the browser's localStorage).
-- Results table built from a JavaScript array. Average of 50 or above is PASS, below 50 is FAIL.
+- Registration form. Submitted requests appear in a table (saved in the browser's localStorage).
+- Results table built from a JavaScript array.
 - Check a result by registration number (e.g. `BICT/2026/104`).
-- Mini to-do list: add, complete, edit and delete tasks.
+- To-do list with: add, complete, edit and delete tasks.
 
 ## AI Usage Declaration
-(Fill this in honestly before submitting.)
-- Was AI used? Yes
-- Tool used: Claude (Anthropic)
-- Used for: generating the starting code for the portal
-- Parts I modified or wrote myself: ________________________
+- Did I use AI? Yes
+- Tools used: Claude(referring and guide), vscodium(code editor).
+- AI Usage: generate foundation code for the portal from some of the html, some coordination of javascript and most css behaviors.
+- Parts I modified or wrote myself: everything starting from the class div's in html, css "transitioning", "color grading", "spacing", "code debugging", "Simplifying and specifying functionality", full README.md modifications.
