@@ -1,26 +1,22 @@
-/* =========================================================
-   Student Information Portal - script.js
-   variables, conditionals, arrays, functions, events
-   DOM-based To-Do list
-   ========================================================= */
+/* Student Information Portal - script.js DOM-based To-Do list */
 
-/* ---------- Variables: one student represented with variables ---------- */
+/* Variables: one student represented with variables */
 const studentName = "Theophilus Miri";
 const studentRegNo = "BICT/2026/001";
 let studentLevel = 2;
 const passMark = 50;
 
-/* ---------- Array of student objects ---------- */
+/* Array of student objects */
 const students = [
-  { name: "Amina Bello",   regNo: "BICT/2026/101", marks: [72, 65, 80] },
-  { name: "Chidi Okafor",  regNo: "BICT/2026/102", marks: [45, 38, 52] },
-  { name: "Grace Adeyemi", regNo: "BICT/2026/103", marks: [58, 61, 49] },
-  { name: "Tunde Bakare",  regNo: "BICT/2026/104", marks: [30, 42, 35] },
+  { name: "Amani Bellroll",   regNo: "BICT/2026/101", marks: [72, 65, 80] },
+  { name: "Chidi Oxford",  regNo: "BICT/2026/102", marks: [45, 38, 52] },
+  { name: "Grace Ayanami", regNo: "BICT/2026/103", marks: [58, 61, 49] },
+  { name: "Tsundere Baki",  regNo: "BICT/2026/104", marks: [30, 42, 35] },
   { name: "Ngozi Eze",     regNo: "BICT/2026/105", marks: [88, 91, 79] },
   { name: "Ibrahim Musa",  regNo: "BICT/2026/106", marks: [50, 50, 50] }
 ];
 
-/* ---------- calculate average mark ---------- */
+/* calculate average mark */
 function calculateAverage(marks) {
   let total = 0;
   for (let i = 0; i < marks.length; i++) {
@@ -29,7 +25,7 @@ function calculateAverage(marks) {
   return marks.length === 0 ? 0 : total / marks.length;
 }
 
-/* ---------- Conditional fuunction: PASS / FAIL ---------- */
+/* Conditional fuunction: PASS / FAIL */
 function getResult(average) {
   if (average >= passMark) {
     return "PASS";
@@ -38,7 +34,7 @@ function getResult(average) {
   }
 }
 
-/* ---------- Render results table dynamically ---------- */
+/* Render results table dynamically */
 const resultsBody = document.getElementById("results-body");
 const resultMessage = document.getElementById("result-message");
 
@@ -68,7 +64,7 @@ function showResultMessage(student) {
   resultMessage.className = "message " + (result === "PASS" ? "ok" : "bad");
 }
 
-/* ---------- Events: click on a "View" button (event delegation) ---------- */
+/* Events: click on a "View" button (event delegation) */
 resultsBody.addEventListener("click", function (event) {
   const button = event.target.closest("button[data-index]");
   if (button) {
@@ -76,7 +72,7 @@ resultsBody.addEventListener("click", function (event) {
   }
 });
 
-/* ---------- Events: submit the result-check form ---------- */
+/* Events: submit the result-check form */
 document.getElementById("check-form").addEventListener("submit", function (event) {
   event.preventDefault();
   const reg = document.getElementById("check-reg").value.trim().toUpperCase();
@@ -92,7 +88,7 @@ document.getElementById("check-form").addEventListener("submit", function (event
   }
 });
 
-/* ---------- Registration form (student requests) ---------- */
+/* Registration form (student requests) */
 const registerForm = document.getElementById("register-form");
 const requestsBody = document.getElementById("requests-body");
 const noRequests = document.getElementById("no-requests");
@@ -131,12 +127,17 @@ registerForm.addEventListener("submit", function (event) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const regPattern = /^[A-Z]{2,6}\/\d{4}\/\d{3,4}$/;
 
-  if (name.length < 3) { setError("name", "Enter your full name (at least 3 characters)."); valid = false; } else { setError("name", ""); }
+  if (name.length < 3) { 
+    setError("name", "Enter your full name (at least 3 characters)."); valid = false; } 
+  else { setError("name", ""); }
   if (!regPattern.test(regno)) { setError("regno", "Use the format BICT/2026/107."); valid = false; }
   else if (requests.some(function (r) { return r.regno === regno; }) ||
-           students.some(function (s) { return s.regNo === regno; })) {
-    setError("regno", "This registration number already exists."); valid = false;
-  } else { setError("regno", ""); }
+           students.some(function (s) { return s.regNo === regno; })) 
+  {
+  setError("regno", "This registration number already exists.");
+  valid = false;
+  }
+  else { setError("regno", ""); }
   if (!emailPattern.test(email)) { setError("email", "Enter a valid email address."); valid = false; } else { setError("email", ""); }
   if (!programme) { setError("programme", "Please select a programme."); valid = false; } else { setError("programme", ""); }
   if (!genderInput) { setError("gender", "Please select a gender."); valid = false; } else { setError("gender", ""); }
@@ -146,7 +147,6 @@ registerForm.addEventListener("submit", function (event) {
     formMessage.className = "message bad";
     return;
   }
-
   requests.push({ name: name, regno: regno, email: email, programme: programme, gender: genderInput.value });
   saveToStorage("portalRequests", requests);
   renderRequests();
@@ -154,8 +154,7 @@ registerForm.addEventListener("submit", function (event) {
   formMessage.textContent = "Thank you, " + name + ". Your registration request has been received.";
   formMessage.className = "message ok";
 });
-
-/* ---------- To-Do List (DOM manipulation) ---------- */
+/* To-Do List (DOM manipulation) */
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");
@@ -169,7 +168,6 @@ function updateTodoCount() {
     ? "No tasks yet. Add one above."
     : done + " of " + items.length + " task(s) completed.";
 }
-
 function createTaskElement(text, completed) {
   const li = document.createElement("li");
   li.className = "todo-item" + (completed ? " completed" : "");
@@ -198,21 +196,18 @@ function createTaskElement(text, completed) {
 
   actions.append(editBtn, deleteBtn);
   li.append(checkbox, span, actions);
-
   // Mark completed
   checkbox.addEventListener("change", function () {
     li.classList.toggle("completed", checkbox.checked);
     updateTodoCount();
     saveTodos();
   });
-
   // Delete
   deleteBtn.addEventListener("click", function () {
     li.remove();
     updateTodoCount();
     saveTodos();
   });
-
   // Edit (toggles between Edit and Save)
   editBtn.addEventListener("click", function () {
     const editing = li.querySelector(".todo-edit");
@@ -242,10 +237,8 @@ function createTaskElement(text, completed) {
       saveTodos();
     }
   });
-
   return li;
 }
-
 function saveTodos() {
   const data = Array.from(todoList.querySelectorAll(".todo-item")).map(function (li) {
     return { text: li.querySelector(".todo-text, .todo-edit").value || li.querySelector(".todo-text").textContent,
@@ -253,7 +246,6 @@ function saveTodos() {
   });
   saveToStorage("portalTodos", data);
 }
-
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const text = todoInput.value.trim();
@@ -270,8 +262,7 @@ todoForm.addEventListener("submit", function (event) {
   updateTodoCount();
   saveTodos();
 });
-
-/* ---------- Helpers ---------- */
+/* Helpers */
 function escapeHTML(str) {
   return String(str).replace(/[&<>"']/g, function (c) {
     return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -284,7 +275,7 @@ function saveToStorage(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* storage unavailable */ }
 }
 
-/* ---------- Start-up ---------- */
+/* Start-up */
 console.log("Logged in as " + studentName + " (" + studentRegNo + "), level " + studentLevel);
 renderResults();
 renderRequests();
