@@ -1,3 +1,7 @@
+https://studentportal-eight-ashen.vercel.app/
+
+# Above link is for the deployed site where you can get the view
+
 # Student Information Portal
 
 Built with vanila HTML, CSS and JavaScript only.
